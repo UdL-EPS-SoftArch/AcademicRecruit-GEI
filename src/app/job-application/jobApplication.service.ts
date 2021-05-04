@@ -1,0 +1,17 @@
+import { Injectable, Injector } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
+import { RestService } from '@lagoshny/ngx-hal-client';
+import { JobApplication } from '../models/jobApplication';
+
+@Injectable()
+export class JobApplicationService extends RestService<JobApplication> {
+
+  constructor(injector: Injector) {
+    super(JobApplication, 'jobApplication', injector);
+  }
+
+  public findByUsernameContaining(text: string): Observable<JobApplication[]> {
+    const options: any = {params: [{key: 'text', value: text}]};
+    return this.search('findByUsernameContaining', options);
+  }
+}
