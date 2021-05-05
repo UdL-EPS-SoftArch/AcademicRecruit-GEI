@@ -2,3 +2,27 @@
 <a href="/jobApplication/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"> Create Job Application</a>
 
 
+<!--<app-user-search (emitResults)="detail($event)"></app-user-search>!-->
+
+<div class="card mb-1" *ngFor="let jobApplication of jobApplications">
+  <div class="card-block row m-1 col-12">
+    <div class="card-body row align-items-center">
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">ID</h6>
+        <a class="card-text" [routerLink]="['/jobApplications', jobApplication.id]">{{jobApplication.id}}</a>
+      </div>
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">Name</h6>
+        <p class="card-text">{{jobApplication.name}}</p>
+      </div>
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">Description</h6>
+        <p class="card-text">{{jobApplication.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngb-pagination class="d-flex justify-content-center"
+                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalJobApplications"
+                (pageChange)="changePage()"></ngb-pagination>

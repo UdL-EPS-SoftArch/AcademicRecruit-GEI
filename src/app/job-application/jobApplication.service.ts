@@ -7,11 +7,6 @@ import { JobApplication } from '../models/jobApplication';
 export class JobApplicationService extends RestService<JobApplication> {
 
   constructor(injector: Injector) {
-    super(JobApplication, 'jobApplication', injector);
-  }
-
-  public findByUsernameContaining(text: string): Observable<JobApplication[]> {
-    const options: any = {params: [{key: 'text', value: text}]};
-    return this.search('findByUsernameContaining', options);
+    super(JobApplication, 'jobApplications', injector);
   }
 }

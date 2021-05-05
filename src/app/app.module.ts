@@ -15,6 +15,8 @@ import { AuthInterceptor } from './login-basic/auth-interceptor';
 
 import { AuthenticationBasicService } from './login-basic/authentication-basic.service';
 import { UserService } from './user/user.service';
+import { JobApplicationService } from './job-application/jobApplication.service';
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -66,7 +68,7 @@ import { JobApplicationSearchComponent } from './job-application/job-application
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
-    AuthenticationBasicService, LoggedInGuard, UserService
+    AuthenticationBasicService, LoggedInGuard, UserService, JobApplicationService
   ],
   bootstrap: [AppComponent]
 })

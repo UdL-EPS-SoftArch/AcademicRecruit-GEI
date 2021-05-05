@@ -17,21 +17,21 @@ export class JobApplicationListComponent implements OnInit {
   private sorting: Sort[] = [{ path: 'name', order: 'ASC' }];
 
   constructor(
-    public router: Router
-    /*private jobApplicationService: JobApplicationService)*/) {
+    public router: Router,
+    private jobApplicationService: JobApplicationService) {
  }
 
   ngOnInit(): void {
-   /* this.jobApplicationService.getAll({size: this.pageSize, sort: this.sorting}).subscribe(
-      (users: JobApplication[]) => {
-        this.jobApplications = users;
+    this.jobApplicationService.getAll({size: this.pageSize, sort: this.sorting}).subscribe(
+      (jobApplications: JobApplication[]) => {
+        this.jobApplications = jobApplications;
         this.totalJobApplications = this.jobApplicationService.totalElement();
-      });*/
+      });
   }
 
   changePage(): void {
-   /* this.jobApplicationService.page(this.page - 1).subscribe(
-      (jobApplications1: JobApplication[]) => this.jobApplications = jobApplications1);*/
+    this.jobApplicationService.page(this.page - 1).subscribe(
+      (jobApplications1: JobApplication[]) => this.jobApplications = jobApplications1);
   }
 
   detail(jobApplication: JobApplication): void {
