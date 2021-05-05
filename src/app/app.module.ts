@@ -25,6 +25,13 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
 import { CommitteeMemberComponent } from './committee-member/committee-member.component';
+import { CommitteemembercreateComponent } from './committeemembercreate/committeemembercreate.component';
+import { CommitteeMemberCreateComponent } from './committee-member/committee-member-create/committee-member-create.component';
+import { CommitteeMemberDeleteComponent } from './committee-member/committee-member-delete/committee-member-delete.component';
+import { CommitteeMemberDetailComponent } from './committee-member/committee-member-detail/committee-member-detail.component';
+import { CommitteeMemberEditComponent } from './committee-member/committee-member-edit/committee-member-edit.component';
+import { CommitteeMemberListComponent } from './committee-member/committee-member-list/committee-member-list.component';
+import { CommitteeMemberSearchComponent } from './committee-member/committee-member-search/committee-member-search.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +44,13 @@ import { CommitteeMemberComponent } from './committee-member/committee-member.co
     UserDeleteComponent,
     UserSearchComponent,
     CommitteeMemberComponent,
+    CommitteemembercreateComponent,
+    CommitteeMemberCreateComponent,
+    CommitteeMemberDeleteComponent,
+    CommitteeMemberDetailComponent,
+    CommitteeMemberEditComponent,
+    CommitteeMemberListComponent,
+    CommitteeMemberSearchComponent,
   ],
   imports: [
     BrowserModule,
