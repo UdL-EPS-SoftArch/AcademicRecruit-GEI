@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthenticationBasicService } from '../../login-basic/authentication-basic.service';
+import { JobApplicationService } from '../jobApplication.service';
 
 @Component({
   selector: 'app-job-application-delete',
@@ -12,4 +15,12 @@ export class JobApplicationDeleteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  delete(): void {
+   /* this.JobApplicationService.delete(this.user).subscribe(
+      () => {
+        this.authenticationService.logout();
+        this.router.navigate(['']);
+      });*/
+  }
 }

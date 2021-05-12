@@ -28,6 +28,7 @@ const routes: Routes = [
   { path: 'jobApplication/:id', component: JobApplicationDetailComponent},
   { path: 'jobApplication/:id/edit', component: JobApplicationEditComponent},
   { path: 'jobApplication', component: JobApplicationListComponent},
+
 ];
 
 @NgModule({

@@ -8,10 +8,6 @@
   <div class="card-block row m-1 col-12">
     <div class="card-body row align-items-center">
       <div class="col-6 mt-1">
-        <h6 class="card-subtitle text-muted">ID</h6>
-        <a class="card-text" [routerLink]="['/jobApplications', jobApplication.id]">{{jobApplication.id}}</a>
-      </div>
-      <div class="col-6 mt-1">
         <h6 class="card-subtitle text-muted">Name</h6>
         <p class="card-text">{{jobApplication.name}}</p>
       </div>
@@ -20,7 +16,10 @@
         <p class="card-text">{{jobApplication.description}}</p>
       </div>
     </div>
+    <button type="button" class="btn btn-outline-primary btn-sm">Información</button>
+    <a class="nav-link" class="btn btn-outline-danger btn-sm"[routerLink]="['/jobApplication/:id/delete']">Eliminar</a>
   </div>
+
 </div>
 
 <ngb-pagination class="d-flex justify-content-center"
