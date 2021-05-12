@@ -1,1 +1,27 @@
-<p>job-application-create works!</p>
+<form id="user-form" (ngSubmit)="onSubmit()" #form="ngForm">
+  <fieldset>
+
+    <!-- Title/Name input -->
+    <div class="form-group" [class.was-validated]="name.dirty || name.touched">
+      <label class="control-label" for="name">Name*</label>
+      <input id="name" name="name" type="text" class="form-control" required
+             [(ngModel)]="jobApplication.name" #name="ngModel">
+      <div class="invalid-feedback">Es necesario introducir un nombre</div>
+    </div>
+
+    <!-- Description input -->
+    <div class="form-group" [class.was-validated]="description.dirty || description.touched">
+      <label class="control-label" for="name">Descripción</label>
+      <input id="description" name="description" type="text" class="form-control" required
+             [(ngModel)]="jobApplication.description" #description="ngModel">
+      <div class="invalid-feedback">Es necesario introducir una descripción</div>
+    </div>
+
+    <!-- Button -->
+    <div class="form-group">
+      <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Submit</button>
+      <button id="listBtn" type="button" (click)="onCancel()" class="btn m-1 btn-outline-primary pull-right">Back</button>
+    </div>
+
+  </fieldset>
+</form>
