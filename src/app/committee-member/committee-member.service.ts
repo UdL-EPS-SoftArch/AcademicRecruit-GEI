@@ -1,9 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
+import { RestService } from '@lagoshny/ngx-hal-client';
+import { CommitteeMember} from '../models/committeeMember';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class CommitteeMemberService {
+@Injectable()
+export class CommitteeMemberService extends RestService<CommitteeMember> {
 
-  constructor() { }
+  constructor(injector: Injector) {
+    super(CommitteeMember, 'committeeMember', injector);
+  }
 }
