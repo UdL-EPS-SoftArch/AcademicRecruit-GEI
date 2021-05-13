@@ -9,14 +9,14 @@
     <div class="card-body row align-items-center">
       <div class="col-6 mt-1">
         <h6 class="card-subtitle text-muted">Name</h6>
-        <p class="card-text">{{jobApplication.name}}</p>
+        <a class="card-text" [routerLink]="['/jobApplication', jobApplication.name]">{{jobApplication.name}}</a>
+
       </div>
       <div class="col-6 mt-1">
         <h6 class="card-subtitle text-muted">Description</h6>
         <p class="card-text">{{jobApplication.description}}</p>
       </div>
     </div>
-    <button type="button" class="btn btn-outline-primary btn-sm">Información</button>
     <a class="nav-link" class="btn btn-outline-danger btn-sm"[routerLink]="['/jobApplication/:id/delete']">Eliminar</a>
   </div>
 
