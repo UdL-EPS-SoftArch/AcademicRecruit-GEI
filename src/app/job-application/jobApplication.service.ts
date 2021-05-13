@@ -9,4 +9,8 @@ export class JobApplicationService extends RestService<JobApplication> {
   constructor(injector: Injector) {
     super(JobApplication, 'jobApplications', injector);
   }
+
+  getCurrentJobApplication(): JobApplication {
+    return new JobApplication(JSON.parse(localStorage.getItem('currentJobApplication')));
+  }
 }

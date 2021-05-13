@@ -9,7 +9,7 @@
     <div class="card-body row align-items-center">
       <div class="col-6 mt-1">
         <h6 class="card-subtitle text-muted">Name</h6>
-        <a class="card-text" [routerLink]="['/jobApplication', jobApplication.name]">{{jobApplication.name}}</a>
+        <a class="card-text" [routerLink]="['/jobApplication', jobApplication.id]">{{jobApplication.name}}</a>
 
       </div>
       <div class="col-6 mt-1">
@@ -18,6 +18,9 @@
       </div>
     </div>
     <a class="nav-link" class="btn btn-outline-danger btn-sm"[routerLink]="['/jobApplication/:id/delete']">Eliminar</a>
+    <button id="deleteBtn" type="button" *ngIf="getCurrentJobApplication().id == jobApplication.id" [routerLink]="['delete']"
+            class="btn m-1 btn-outline-danger">Delete
+    </button>
   </div>
 
 </div>

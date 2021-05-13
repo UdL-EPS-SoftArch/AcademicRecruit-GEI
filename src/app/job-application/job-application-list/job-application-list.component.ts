@@ -37,4 +37,8 @@ export class JobApplicationListComponent implements OnInit {
   detail(jobApplication: JobApplication): void {
     this.router.navigate(['jobApplications', jobApplication.id]);
   }
+
+  getCurrentJobApplication(): JobApplication {
+    return this.jobApplicationService.getCurrentJobApplication();
+  }
 }
