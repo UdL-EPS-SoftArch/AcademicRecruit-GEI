@@ -17,8 +17,7 @@
         <p class="card-text">{{jobApplication.description}}</p>
       </div>
     </div>
-    <a class="nav-link" class="btn btn-outline-danger btn-sm"[routerLink]="['/jobApplication/:id/delete']">Eliminar</a>
-    <button id="deleteBtn" type="button" *ngIf="getCurrentJobApplication().id == jobApplication.id" [routerLink]="['delete']"
+    <button id="deleteBtn" type="button" [routerLink]="[jobApplication.id, 'delete']"
             class="btn m-1 btn-outline-danger">Delete
     </button>
   </div>
