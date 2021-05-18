@@ -24,6 +24,12 @@ import { UserRegisterComponent } from './user/user-register/user-register.compon
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
+import { QualificationCreateComponent } from './qualification/qualification-create/qualification-create.component';
+import { QualificationDeleteComponent } from './qualification/qualification-delete/qualification-delete.component';
+import { QualificationDetailComponent } from './qualification/qualification-detail/qualification-detail.component';
+import { QualificationEditComponent } from './qualification/qualification-edit/qualification-edit.component';
+import { QualificationSearchComponent } from './qualification/qualification-search/qualification-search.component';
+import { QualificationListComponent } from './qualification/qualification-list/qualification-list.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,13 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
     UserRegisterComponent,
     UserEditComponent,
     UserDeleteComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    QualificationCreateComponent,
+    QualificationDeleteComponent,
+    QualificationDetailComponent,
+    QualificationEditComponent,
+    QualificationSearchComponent,
+    QualificationListComponent
   ],
   imports: [
     BrowserModule,
