@@ -16,4 +16,15 @@
       </div>
     </div>
   </div>
+  <div class="card-footer text-right">
+    <button id="listBtn" type="button" [routerLink]="['/jobApplication']"
+            class="btn m-1 btn-outline-primary">User List
+    </button>
+   <button id="editBtn" type="button"  [routerLink]="['edit']"
+            class="btn m-1 btn-outline-success">Edit
+    </button>
+    <button id="deleteBtn" type="button" [routerLink]="['delete']"
+            class="btn m-1 btn-outline-danger">Delete
+    </button>
+  </div>
 </div>
