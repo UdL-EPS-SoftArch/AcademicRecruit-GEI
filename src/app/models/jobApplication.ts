@@ -7,6 +7,7 @@ export class JobApplication extends Resource {
   requirements: string;
   evaluationCriteria: string;
   currentPhase: string;
+  descriptionReset = false;
 
   uri: string;
 
