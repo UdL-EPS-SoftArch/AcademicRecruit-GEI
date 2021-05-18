@@ -15,6 +15,7 @@ import { AuthInterceptor } from './login-basic/auth-interceptor';
 
 import { AuthenticationBasicService } from './login-basic/authentication-basic.service';
 import { UserService } from './user/user.service';
+import { CommitteeMemberService} from './committee-member/committee-member.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -66,7 +67,7 @@ import { CommitteeMemberSearchComponent } from './committee-member/committee-mem
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
-    AuthenticationBasicService, LoggedInGuard, UserService
+    AuthenticationBasicService, LoggedInGuard, UserService, CommitteeMemberService
   ],
   bootstrap: [AppComponent]
 })

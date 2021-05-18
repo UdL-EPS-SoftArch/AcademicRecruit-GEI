@@ -9,4 +9,8 @@ export class CommitteeMemberService extends RestService<CommitteeMember> {
   constructor(injector: Injector) {
     super(CommitteeMember, 'committeeMember', injector);
   }
+
+  getCurrentCommitteeMember(): CommitteeMember {
+    return new CommitteeMember(JSON.parse(localStorage.getItem('currentCommitteeMember')));
+  }
 }

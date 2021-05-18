@@ -10,10 +10,36 @@ import {CommitteeMember} from '../../models/committeeMember';
   styleUrls: ['./committee-member-list.component.css']
 })
 export class CommitteeMemberListComponent implements OnInit {
-  constructor() {
+  public committeeMembers: CommitteeMember[] = [];
+  public pageSize = 5;
+  public page = 1;
+  public totalCommitteeMembers = 0;
+  private sorting: Sort[] = [{path: 'name', order: 'ASC'}];
+
+  constructor(
+    public router: Router,
+    public committeeMemberService: CommitteeMemberService) {
   }
 
   ngOnInit(): void {
+    this.committeeMemberService.getAll({size: this.pageSize, sort: this.sorting}).subscribe(
+      (committeeMembers: CommitteeMember[]) => {
+        this.committeeMembers = committeeMembers;
+        this.totalCommitteeMembers = this.committeeMemberService.totalElement();
+      });
+  }
+
+  changePage(): void{
+    this.committeeMemberService.page(this.page - 1).subscribe(
+      (committeeMembers1: CommitteeMember[]) => this.committeeMembers = committeeMembers1);
+  }
+
+  detail(committeeMember: CommitteeMember): void {
+    this.router.navigate(['committeeMember', committeeMember.id]);
+  }
+
+  getCurrentCommitteeMember(): CommitteeMember{
+    return this.committeeMemberService.getCurrentCommitteeMember();
   }
 
 }
