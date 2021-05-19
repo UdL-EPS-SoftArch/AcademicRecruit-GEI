@@ -10,6 +10,16 @@
       <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-link" [routerLink]="['/about']">About</a>
       </li>
+      <li class="nav-item"ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="documentdropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Applicant</a>
+        <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/document']"><span class="fas fa-user-circle"></span> List</a>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/document/create']"><span class="fas fa-user-plus"></span> Create Document</a>
+        </div>
+      </li>
       <li class="nav-item" *ngIf="isRole('admin')" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="playerDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Users</a>

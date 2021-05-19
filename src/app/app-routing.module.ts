@@ -8,6 +8,11 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
+import {DocumentCreateComponent} from './document/document-create/document-create.component';
+import {DocumentDeleteComponent} from './document/document-delete/document-delete.component';
+import {DocumentDetailComponent} from './document/document-detail/document-detail.component';
+import {DocumentEditComponent} from './document/document-edit/document-edit.component';
+import {DocumentListComponent} from './document/document-list/document-list.component';
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -18,6 +23,11 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
+  { path: 'document/create', component: DocumentCreateComponent},
+  { path: 'document/:id/delete', component: DocumentDeleteComponent},
+  { path: 'document/:id', component: DocumentDetailComponent},
+  { path: 'document/:id/edit', component: DocumentEditComponent},
+  { path: 'document', component: DocumentListComponent},
 ];
 
 @NgModule({

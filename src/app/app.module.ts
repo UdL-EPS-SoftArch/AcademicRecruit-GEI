@@ -24,6 +24,12 @@ import { UserRegisterComponent } from './user/user-register/user-register.compon
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
+import { DocumentCreateComponent } from './document/document-create/document-create.component';
+import { DocumentDeleteComponent } from './document/document-delete/document-delete.component';
+import { DocumentDetailComponent } from './document/document-detail/document-detail.component';
+import { DocumentListComponent } from './document/document-list/document-list.component';
+import { DocumentEditComponent } from './document/document-edit/document-edit.component';
+import { DocumentSearchComponent } from './document/document-search/document-search.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,13 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
     UserRegisterComponent,
     UserEditComponent,
     UserDeleteComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    DocumentCreateComponent,
+    DocumentDeleteComponent,
+    DocumentDetailComponent,
+    DocumentListComponent,
+    DocumentEditComponent,
+    DocumentSearchComponent
   ],
   imports: [
     BrowserModule,
