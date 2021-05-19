@@ -8,6 +8,11 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
+import {PhaseCreateComponent} from './phase/phase-create/phase-create.component';
+import {PhaseDeleteComponent} from './phase/phase-delete/phase-delete.component';
+import {PhaseDetailComponent} from './phase/phase-detail/phase-detail.component';
+import {PhaseEditComponent} from './phase/phase-edit/phase-edit.component';
+import {PhaseListComponent} from './phase/phase-list/phase-list.component';
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -18,6 +23,11 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
+  { path: 'phase/create', component: PhaseCreateComponent},
+  { path: 'phase/:id/delete', component: PhaseDeleteComponent},
+  { path: 'phase/:id', component: PhaseDetailComponent},
+  { path: 'phase/:id/edit', component: PhaseEditComponent},
+  { path: 'phase', component: PhaseListComponent},
 ];
 
 @NgModule({
