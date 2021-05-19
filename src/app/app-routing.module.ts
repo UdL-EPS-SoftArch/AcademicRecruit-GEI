@@ -8,6 +8,11 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
+import {ApplicantCreateComponent} from './applicant/applicant-create/applicant-create.component';
+import {ApplicantDeleteComponent} from './applicant/applicant-delete/applicant-delete.component';
+import {ApplicantDetailComponent} from './applicant/applicant-detail/applicant-detail.component';
+import {ApplicantEditComponent} from './applicant/applicant-edit/applicant-edit.component';
+import {ApplicantListComponent} from './applicant/applicant-list/applicant-list.component';
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -18,6 +23,11 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
+  { path: 'applicant/create', component: ApplicantCreateComponent},
+  { path: 'applicant/:id/delete', component: ApplicantDeleteComponent},
+  { path: 'applicant/:id', component: ApplicantDetailComponent},
+  { path: 'applicant/:id/edit', component: ApplicantEditComponent},
+  { path: 'applicant', component: ApplicantListComponent},
 ];
 
 @NgModule({

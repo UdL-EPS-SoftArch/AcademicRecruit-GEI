@@ -24,6 +24,12 @@ import { UserRegisterComponent } from './user/user-register/user-register.compon
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
+import { ApplicantCreateComponent } from './applicant/applicant-create/applicant-create.component';
+import { ApplicantDeleteComponent } from './applicant/applicant-delete/applicant-delete.component';
+import { ApplicantDetailComponent } from './applicant/applicant-detail/applicant-detail.component';
+import { ApplicantEditComponent } from './applicant/applicant-edit/applicant-edit.component';
+import { ApplicantListComponent } from './applicant/applicant-list/applicant-list.component';
+import { ApplicantSearchComponent } from './applicant/applicant-search/applicant-search.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,13 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
     UserRegisterComponent,
     UserEditComponent,
     UserDeleteComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    ApplicantCreateComponent,
+    ApplicantDeleteComponent,
+    ApplicantDetailComponent,
+    ApplicantEditComponent,
+    ApplicantListComponent,
+    ApplicantSearchComponent
   ],
   imports: [
     BrowserModule,
