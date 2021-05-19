@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {JobApplication} from '../../models/jobApplication';
 import {JobApplicationService} from '../jobApplication.service';
-import {User} from '../../login-basic/user';
 
 @Component({
   selector: 'app-job-application-edit',
@@ -25,15 +24,9 @@ export class JobApplicationEditComponent implements OnInit {
 
   onSubmit(): void {
     // tslint:disable-next-line:max-line-length
-    this.jobApplication.description = this.jobApplication.descriptionReset ? this.jobApplication.description : undefined; // Don't edit if not a reset
     this.jobApplicationService.patch(this.jobApplication).subscribe(
       (patchedJobApplication: JobApplication) => {
-        if (this.jobApplication.descriptionReset) {
-          this.jobApplicationService.create(this.jobApplication).subscribe(
-            (newApplication: JobApplication) => {
-              this.router.navigate(['jobApplication']);
-            });
-        }
+        this.router.navigate(['jobApplication', this.jobApplication.id]);
       });
   }
 }

@@ -7,10 +7,10 @@
       <input id="name" name="name" type="text" class="form-control" readonly [ngModel]="jobApplication.name">
     </div>
 
-    <!-- Description input -->
+     <!-- Description input -->
     <div class="form-group" [class.was-validated]="description.dirty || description.touched">
-      <label class="control-label" for="description">Description</label>
-      <input id="description" name="description" class="form-control" required
+      <label class="control-label" for="description2">Description</label>
+      <input id="description2" name="description" class="form-control" required minlength="8" maxlength="256"
              [(ngModel)]="jobApplication.description" #description="ngModel">
       <div class="invalid-feedback">A description is required</div>
     </div>

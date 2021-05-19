@@ -22,5 +22,4 @@ export class JobApplicationDetailComponent implements OnInit {
         this.jobApplication = jobApplication;
       });
   }
-
 }
