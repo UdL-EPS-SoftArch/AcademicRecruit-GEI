@@ -15,6 +15,8 @@ import { AuthInterceptor } from './login-basic/auth-interceptor';
 
 import { AuthenticationBasicService } from './login-basic/authentication-basic.service';
 import { UserService } from './user/user.service';
+import { JobApplicationService } from './job-application/jobApplication.service';
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -24,6 +26,12 @@ import { UserRegisterComponent } from './user/user-register/user-register.compon
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
+import { JobApplicationCreateComponent } from './job-application/job-application-create/job-application-create.component';
+import { JobApplicationDeleteComponent } from './job-application/job-application-delete/job-application-delete.component';
+import { JobApplicationDetailComponent } from './job-application/job-application-detail/job-application-detail.component';
+import { JobApplicationEditComponent } from './job-application/job-application-edit/job-application-edit.component';
+import { JobApplicationListComponent } from './job-application/job-application-list/job-application-list.component';
+import { JobApplicationSearchComponent } from './job-application/job-application-search/job-application-search.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +42,13 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
     UserRegisterComponent,
     UserEditComponent,
     UserDeleteComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    JobApplicationCreateComponent,
+    JobApplicationDeleteComponent,
+    JobApplicationDetailComponent,
+    JobApplicationEditComponent,
+    JobApplicationListComponent,
+    JobApplicationSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +68,7 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
-    AuthenticationBasicService, LoggedInGuard, UserService
+    AuthenticationBasicService, LoggedInGuard, UserService, JobApplicationService
   ],
   bootstrap: [AppComponent]
 })
