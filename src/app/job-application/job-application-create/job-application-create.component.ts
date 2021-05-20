@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
-import {Location} from "@angular/common";
-import {AuthenticationBasicService} from "../../login-basic/authentication-basic.service";
-import {JobApplicationService} from "../jobApplication.service";
-import {JobApplication} from "../../models/jobApplication";
+import {Router} from '@angular/router';
+import {Location} from '@angular/common';
+import {AuthenticationBasicService} from '../../login-basic/authentication-basic.service';
+import {JobApplicationService} from '../jobApplication.service';
+import {JobApplication} from '../../models/jobApplication';
 
 @Component({
   selector: 'app-job-application-create',

@@ -35,7 +35,7 @@ export class CommitteeMemberListComponent implements OnInit {
   }
 
   detail(committeeMember: CommitteeMember): void {
-    this.router.navigate(['committeeMember', committeeMember.id]);
+    this.router.navigate(['committeeMembers', committeeMember.id]);
   }
 
   getCurrentCommitteeMember(): CommitteeMember{

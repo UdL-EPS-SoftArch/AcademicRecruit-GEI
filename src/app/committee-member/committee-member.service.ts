@@ -7,7 +7,7 @@ import { CommitteeMember} from '../models/committeeMember';
 export class CommitteeMemberService extends RestService<CommitteeMember> {
 
   constructor(injector: Injector) {
-    super(CommitteeMember, 'committeeMember', injector);
+    super(CommitteeMember, 'committeeMembers', injector);
   }
 
   getCurrentCommitteeMember(): CommitteeMember {

@@ -12,7 +12,7 @@
     <!-- Description input -->
     <div class="form-group" [class.was-validated]="description.dirty || description.touched">
       <label class="control-label" for="name">Descripción</label>
-      <input id="description" name="description" type="text" class="form-control" required
+      <input id="description" name="description" type="text" class="form-control" required minlength="8" maxlength="256"
              [(ngModel)]="jobApplication.description" #description="ngModel">
       <div class="invalid-feedback">Es necesario introducir una descripción</div>
     </div>

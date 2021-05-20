@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {CommitteeMember} from '../../models/committeeMember';
+import {CommitteeMemberService} from '../committee-member.service';
 
 @Component({
   selector: 'app-committee-member-detail',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommitteeMemberDetailComponent implements OnInit {
 
-  constructor() { }
+  public committeeMember: CommitteeMember = new CommitteeMember();
+
+  constructor(private route: ActivatedRoute,
+              private committeeMemberService: CommitteeMemberService) {
+  }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.committeeMemberService.get(id).subscribe(
+      committeeMember => {
+        this.committeeMember = committeeMember;
+      });
   }
 
 }

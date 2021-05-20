@@ -1,14 +1,24 @@
+<form (ngSubmit)="onSubmit()" #form="ngForm">
 
+  <fieldset>
 
-<div class="col">
-  <p>Assigna el teu rank</p>
-  <div>
-    <select>
-      <option>Vocal</option>
-      <option>Secretary</option>
-      <option>President</option>
-    </select>
-  </div>
-  <button class="btn btn-primary cmbutton" routerLink="/committeemember">Assign rank</button>
-</div>
+    <!-- Rank input -->
+    <div class="form-group" [class.was-validated]="rank.dirty || rank.touched">
+      <label class="control-label" for="rank">Rank</label>
+      <select id="rank" name="rank" class="form-control" required
+              [(ngModel)]="committeeMember.rank" #rank="ngModel">
+        <option value="VOCAL">Vocal</option>
+        <option value="SECRETARY">Secretary</option>
+        <option value="PRESIDENT">President</option>
+      </select>
+      <div class="invalid-feedback">Es necesario introducir un rank</div>
+    </div>
+
+    <div class="form-group">
+      <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Submit</button>
+      <button id="listBtn" type="button" (click)="onCancel()" class="btn m-1 btn-outline-primary pull-right">Back</button>
+    </div>
+
+  </fieldset>
+</form>
 
