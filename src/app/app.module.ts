@@ -30,6 +30,10 @@ import { ApplicantDetailComponent } from './applicant/applicant-detail/applicant
 import { ApplicantEditComponent } from './applicant/applicant-edit/applicant-edit.component';
 import { ApplicantListComponent } from './applicant/applicant-list/applicant-list.component';
 import { ApplicantSearchComponent } from './applicant/applicant-search/applicant-search.component';
+<<<<<<< Updated upstream
+=======
+import { ApplicantService } from './applicant/applicant.service';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -41,6 +45,21 @@ import { ApplicantSearchComponent } from './applicant/applicant-search/applicant
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
+<<<<<<< Updated upstream
+=======
+    CommitteeMemberCreateComponent,
+    CommitteeMemberDeleteComponent,
+    CommitteeMemberDetailComponent,
+    CommitteeMemberEditComponent,
+    CommitteeMemberListComponent,
+    CommitteeMemberSearchComponent,
+    JobApplicationCreateComponent,
+    JobApplicationDeleteComponent,
+    JobApplicationDetailComponent,
+    JobApplicationEditComponent,
+    JobApplicationListComponent,
+    JobApplicationSearchComponent,
+>>>>>>> Stashed changes
     ApplicantCreateComponent,
     ApplicantDeleteComponent,
     ApplicantDetailComponent,
@@ -66,7 +85,11 @@ import { ApplicantSearchComponent } from './applicant/applicant-search/applicant
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
+<<<<<<< Updated upstream
     AuthenticationBasicService, LoggedInGuard, UserService
+=======
+    AuthenticationBasicService, LoggedInGuard, UserService, CommitteeMemberService, JobApplicationService, ApplicantService
+>>>>>>> Stashed changes
   ],
   bootstrap: [AppComponent]
 })
