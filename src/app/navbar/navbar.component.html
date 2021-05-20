@@ -17,21 +17,6 @@
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/applicant']"><span class="fas fa-user-circle"></span> List</a>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-<<<<<<< Updated upstream
-=======
-             [routerLink]="['/jobApplication']"><span class="fas fa-user-circle"></span> List</a>
-          <a *ngIf="isRole('admin')" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/jobApplication/create']"><span class="fas fa-address-card"></span> Create JobApplication</a>
-        </div>
-      </li>
-      <li class="nav-item"  ngbDropdown>
-        <a class="nav-link dropdown-toggle" id="applicantDropdown" role="button"
-           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Applicant</a>
-        <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
-          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/applicant']"><span class="fas fa-user-circle"></span> List</a>
-          <a *ngIf="isRole('admin')" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
->>>>>>> Stashed changes
              [routerLink]="['/applicant/create']"><span class="fas fa-user-plus"></span> Create Applicant</a>
         </div>
       </li>
