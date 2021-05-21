@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Document } from 'src/app/models/document';
+import { DocumentService } from '../document.service';
 
 @Component({
   selector: 'app-document-list',
@@ -6,10 +9,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./document-list.component.css']
 })
 export class DocumentListComponent implements OnInit {
+  public documents: Document[] = [];
+  public pageSize = 5;
+  public page = 1;
+  public totalDocuments = 0;
 
-  constructor() { }
+  constructor(private router: Router,
+              private documentService: DocumentService) { }
 
   ngOnInit(): void {
+    this.documentService.getAll({size: this.pageSize}).subscribe(
+      (documents: Document[]) => {
+        this.documents = documents;
+        this.totalDocuments = this.documentService.totalElement();
+      }
+    );
+  }
+
+  changePage(): void {
+    this.documentService.page(this.page - 1).subscribe(
+      (documents1: Document[]) => this.documents = documents1
+    );
+  }
+
+  detail(document: Document): void {
+    this.router.navigate(['document', document.id]);
+  }
+
+  getCurrentDocument(): Document {
+    return this.documentService.getCurrentDocument();
   }
 
 }

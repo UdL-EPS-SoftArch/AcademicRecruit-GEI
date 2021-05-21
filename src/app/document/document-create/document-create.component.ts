@@ -1,4 +1,9 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationBasicService } from 'src/app/login-basic/authentication-basic.service';
+import { Document } from 'src/app/models/document';
+import { DocumentService } from '../document.service';
 
 @Component({
   selector: 'app-document-create',
@@ -7,9 +12,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocumentCreateComponent implements OnInit {
 
-  constructor() { }
+  public document: Document;
+  constructor(private router: Router,
+              private location: Location,
+              private documentService: DocumentService,
+              private authenticationBasicService: AuthenticationBasicService) { }
 
   ngOnInit(): void {
+    this.document = new Document();
+  }
+
+  onSubmit(): void {
+    this.documentService.create(this.document).subscribe(
+      (newDocument: Document) => {
+        this.router.navigate(['document']);
+      }
+    );
+  }
+
+  onCancel(): void {
+    this.location.back();
   }
 
 }
