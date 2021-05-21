@@ -1,1 +1,32 @@
-<button class="btn btn-primary cmbutton" routerLink="/applicant">Applicant Edit</button>
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+    <fieldset>
+        <div class="form-group">
+            <div>
+                <p>Email *</p>
+                <input id="email" name="email" class="form-control" required [(ngModel)]="applicant.email"/>
+                <!-- TODO: VALIDACIO
+                <div class="invalid-email">Es necessario introducir un correo electronico</div>
+                -->
+            </div>
+            <div>
+                <p>Name</p>
+                <input id="name" name="name" class="form-control" [(ngModel)]="applicant.name"/>
+            </div>
+            <div>
+                <p>Last name</p>
+                <input id="lastname" name="lastname" class="form-control" [(ngModel)]="applicant.lastname"/>
+            </div>
+            <div>
+                <p>DNI *</p>
+                <input id="dni" name="dni" class="form-control" required [(ngModel)]="applicant.DNI"/>
+                <!-- TODO: VALIDACIO
+                <div class="invalid-email">Es necessario introducir un DNI válido</div>
+                -->
+            </div>
+        </div>
+        <div class="form-group">
+            <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Submit</button>
+            <button id="back" type="button" [routerLink]="['/applicant/'+applicant.id]" class="btn m-1 btn-outline-primary pull-right">Back</button>
+        </div>
+    </fieldset>
+  </form>
