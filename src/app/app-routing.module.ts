@@ -8,6 +8,11 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
+import {QualificationCreateComponent} from './qualification/qualification-create/qualification-create.component';
+import {QualificationDeleteComponent} from './qualification/qualification-delete/qualification-delete.component';
+import {QualificationDetailComponent} from './qualification/qualification-detail/qualification-detail.component';
+import {QualificationEditComponent} from './qualification/qualification-edit/qualification-edit.component';
+import {QualificationListComponent} from './qualification/qualification-list/qualification-list.component';
 import {DocumentCreateComponent} from './document/document-create/document-create.component';
 import {DocumentDeleteComponent} from './document/document-delete/document-delete.component';
 import {DocumentDetailComponent} from './document/document-detail/document-detail.component';
@@ -44,6 +49,11 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full'},
+  { path: 'qualification/create', component: QualificationCreateComponent},
+  { path: 'qualification/:id/delete', component: QualificationDeleteComponent},
+  { path: 'qualification/:id', component: QualificationDetailComponent},
+  { path: 'qualification/:id/edit', component: QualificationEditComponent},
+  { path: 'qualification', component: QualificationListComponent},
   { path: 'document/create', component: DocumentCreateComponent},
   { path: 'document/:id/delete', component: DocumentDeleteComponent},
   { path: 'document/:id', component: DocumentDetailComponent},

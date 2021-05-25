@@ -11,6 +11,16 @@
         <a class="nav-link" [routerLink]="['/about']">About</a>
       </li>
       <li class="nav-item"ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="qualificationdropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Qualification</a>
+        <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/qualification']"><span class="fas fa-user-circle"></span> List</a>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/qualification/create']"><span class="fas fa-user-plus"></span> Create Qualification</a>
+        </div>
+      </li>
+      <li class="nav-item"  ngbDropdown>
         <a class="nav-link dropdown-toggle" id="documentdropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Applicant</a>
         <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
@@ -60,6 +70,7 @@
              [routerLink]="['/applicant/create']"><span class="fas fa-user-plus"></span> Create Applicant</a>
         </div>
       </li>
+>>>>>>> 6a830b71758f214f7f4564d0b29c826213865ed8
       <li class="nav-item" *ngIf="isRole('admin')" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="playerDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Users</a>
