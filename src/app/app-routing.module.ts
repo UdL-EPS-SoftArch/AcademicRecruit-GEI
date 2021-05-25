@@ -23,6 +23,11 @@ import { JobApplicationDeleteComponent } from './job-application/job-application
 import { JobApplicationDetailComponent } from './job-application/job-application-detail/job-application-detail.component';
 import { JobApplicationEditComponent } from './job-application/job-application-edit/job-application-edit.component';
 import { JobApplicationListComponent } from './job-application/job-application-list/job-application-list.component';
+import {ApplicantCreateComponent} from './applicant/applicant-create/applicant-create.component';
+import {ApplicantDeleteComponent} from './applicant/applicant-delete/applicant-delete.component';
+import {ApplicantDetailComponent} from './applicant/applicant-detail/applicant-detail.component';
+import {ApplicantEditComponent} from './applicant/applicant-edit/applicant-edit.component';
+import {ApplicantListComponent} from './applicant/applicant-list/applicant-list.component';
 
 
 const routes: Routes = [
@@ -48,7 +53,15 @@ const routes: Routes = [
   { path: 'jobApplication/:id/delete', component: JobApplicationDeleteComponent},
   { path: 'jobApplication/:id', component: JobApplicationDetailComponent},
   { path: 'jobApplication/:id/edit', component: JobApplicationEditComponent},
-  { path: 'jobApplication', component: JobApplicationListComponent}
+  { path: 'jobApplication', component: JobApplicationListComponent},
+  { path: 'applicant/create', component: ApplicantCreateComponent},
+  { path: 'applicant/:id/delete', component: ApplicantDeleteComponent},
+  { path: 'applicant/:id', component: ApplicantDetailComponent},
+  { path: 'applicant/:id/edit', component: ApplicantEditComponent},
+  { path: 'applicant', component: ApplicantListComponent},
+  { path: 'about', component: AboutComponent},
+  { path: '404', component: NotFoundComponent},
+  { path: '', redirectTo: 'about', pathMatch: 'full'}
 ];
 
 @NgModule({

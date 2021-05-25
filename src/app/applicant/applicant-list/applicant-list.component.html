@@ -1,0 +1,21 @@
+
+<button class="btn btn-primary cmbutton" routerLink="/applicant/create">Create Applicant</button>
+<button class="btn btn-primary cmbutton" routerLink="/applicant/1/delete">Delete Applicant</button>
+<button class="btn btn-primary cmbutton" routerLink="/applicant/1/edit">Edit Applicant</button>
+<button class="btn btn-primary cmbutton" routerLink="/applicant/1">Applicant Details</button>
+
+<div class="card mb-1" *ngFor="let applicant of applicants">
+    <div class="card-block row m-1 col-12">
+      <div class="card-body row align-items-center">
+        <div class="col-6 mt-1">
+          <h6 class="card-subtitle text-muted">Applicant</h6>
+          <a class="card-text" [routerLink]="['/applicant', applicant.id]">{{applicant.email}}</a>
+          <a class="card-text" [routerLink]="['/applicant', applicant.id]">{{applicant.DNI}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ngb-pagination class="d-flex justify-content-center"
+                  [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalApplicants"
+                  (pageChange)="changePage()"></ngb-pagination>
