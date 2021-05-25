@@ -43,6 +43,12 @@ import { JobApplicationDetailComponent } from './job-application/job-application
 import { JobApplicationEditComponent } from './job-application/job-application-edit/job-application-edit.component';
 import { JobApplicationListComponent } from './job-application/job-application-list/job-application-list.component';
 import { JobApplicationSearchComponent } from './job-application/job-application-search/job-application-search.component';
+import { ApplicantCreateComponent } from './applicant/applicant-create/applicant-create.component';
+import { ApplicantDeleteComponent } from './applicant/applicant-delete/applicant-delete.component';
+import { ApplicantDetailComponent } from './applicant/applicant-detail/applicant-detail.component';
+import { ApplicantEditComponent } from './applicant/applicant-edit/applicant-edit.component';
+import { ApplicantListComponent } from './applicant/applicant-list/applicant-list.component';
+import { ApplicantSearchComponent } from './applicant/applicant-search/applicant-search.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +77,14 @@ import { JobApplicationSearchComponent } from './job-application/job-application
     JobApplicationDetailComponent,
     JobApplicationEditComponent,
     JobApplicationListComponent,
-    JobApplicationSearchComponent
+    JobApplicationSearchComponent,
+    UserSearchComponent,
+    ApplicantCreateComponent,
+    ApplicantDeleteComponent,
+    ApplicantDetailComponent,
+    ApplicantEditComponent,
+    ApplicantListComponent,
+    ApplicantSearchComponent
   ],
   imports: [
     BrowserModule,
