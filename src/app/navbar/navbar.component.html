@@ -20,6 +20,26 @@
              [routerLink]="['/document/create']"><span class="fas fa-user-plus"></span> Create Document</a>
         </div>
       </li>
+      <li class="nav-item"  ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="committeedropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>CommitteeMember</a>
+        <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/committeemember']"><span class="fas fa-user-circle"></span> List</a>
+          <a *ngIf="isRole('admin')" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/committeemember/create']"><span class="fas fa-user-plus"></span> Create CommitteeMember</a>
+        </div>
+      </li>
+      <li class="nav-item"  ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="jobApplicationDropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Job Application</a>
+        <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/jobApplication']"><span class="fas fa-user-circle"></span> List</a>
+          <a *ngIf="isRole('admin')" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/jobApplication/create']"><span class="fas fa-address-card"></span> Create</a>
+        </div>
+      </li>
       <li class="nav-item" *ngIf="isRole('admin')" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="playerDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Users</a>

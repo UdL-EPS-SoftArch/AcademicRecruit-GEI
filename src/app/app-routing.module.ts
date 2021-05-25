@@ -13,6 +13,17 @@ import {DocumentDeleteComponent} from './document/document-delete/document-delet
 import {DocumentDetailComponent} from './document/document-detail/document-detail.component';
 import {DocumentEditComponent} from './document/document-edit/document-edit.component';
 import {DocumentListComponent} from './document/document-list/document-list.component';
+import {CommitteeMemberCreateComponent} from './committee-member/committee-member-create/committee-member-create.component';
+import {CommitteeMemberDeleteComponent} from './committee-member/committee-member-delete/committee-member-delete.component';
+import {CommitteeMemberEditComponent} from './committee-member/committee-member-edit/committee-member-edit.component';
+import {CommitteeMemberListComponent} from './committee-member/committee-member-list/committee-member-list.component';
+import {CommitteeMemberDetailComponent} from './committee-member/committee-member-detail/committee-member-detail.component';
+import { JobApplicationCreateComponent } from './job-application/job-application-create/job-application-create.component';
+import { JobApplicationDeleteComponent } from './job-application/job-application-delete/job-application-delete.component';
+import { JobApplicationDetailComponent } from './job-application/job-application-detail/job-application-detail.component';
+import { JobApplicationEditComponent } from './job-application/job-application-edit/job-application-edit.component';
+import { JobApplicationListComponent } from './job-application/job-application-list/job-application-list.component';
+
 
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
@@ -28,6 +39,16 @@ const routes: Routes = [
   { path: 'document/:id', component: DocumentDetailComponent},
   { path: 'document/:id/edit', component: DocumentEditComponent},
   { path: 'document', component: DocumentListComponent},
+  { path: 'committeemember/create', component: CommitteeMemberCreateComponent},
+  { path: 'committeemember/:id/delete', component: CommitteeMemberDeleteComponent},
+  { path: 'committeemember/:id', component: CommitteeMemberDetailComponent},
+  { path: 'committeemember/:id/edit', component: CommitteeMemberEditComponent},
+  { path: 'committeemember', component: CommitteeMemberListComponent},
+  { path: 'jobApplication/create', component: JobApplicationCreateComponent},
+  { path: 'jobApplication/:id/delete', component: JobApplicationDeleteComponent},
+  { path: 'jobApplication/:id', component: JobApplicationDetailComponent},
+  { path: 'jobApplication/:id/edit', component: JobApplicationEditComponent},
+  { path: 'jobApplication', component: JobApplicationListComponent}
 ];
 
 @NgModule({

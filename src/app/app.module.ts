@@ -15,7 +15,8 @@ import { AuthInterceptor } from './login-basic/auth-interceptor';
 
 import { AuthenticationBasicService } from './login-basic/authentication-basic.service';
 import { UserService } from './user/user.service';
-
+import { CommitteeMemberService} from './committee-member/committee-member.service';
+import { JobApplicationService } from './job-application/jobApplication.service';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserListComponent } from './user/user-list/user-list.component';
@@ -30,6 +31,18 @@ import { DocumentDetailComponent } from './document/document-detail/document-det
 import { DocumentListComponent } from './document/document-list/document-list.component';
 import { DocumentEditComponent } from './document/document-edit/document-edit.component';
 import { DocumentSearchComponent } from './document/document-search/document-search.component';
+import { CommitteeMemberCreateComponent } from './committee-member/committee-member-create/committee-member-create.component';
+import { CommitteeMemberDeleteComponent } from './committee-member/committee-member-delete/committee-member-delete.component';
+import { CommitteeMemberDetailComponent } from './committee-member/committee-member-detail/committee-member-detail.component';
+import { CommitteeMemberEditComponent } from './committee-member/committee-member-edit/committee-member-edit.component';
+import { CommitteeMemberListComponent } from './committee-member/committee-member-list/committee-member-list.component';
+import { CommitteeMemberSearchComponent } from './committee-member/committee-member-search/committee-member-search.component';
+import { JobApplicationCreateComponent } from './job-application/job-application-create/job-application-create.component';
+import { JobApplicationDeleteComponent } from './job-application/job-application-delete/job-application-delete.component';
+import { JobApplicationDetailComponent } from './job-application/job-application-detail/job-application-detail.component';
+import { JobApplicationEditComponent } from './job-application/job-application-edit/job-application-edit.component';
+import { JobApplicationListComponent } from './job-application/job-application-list/job-application-list.component';
+import { JobApplicationSearchComponent } from './job-application/job-application-search/job-application-search.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +59,19 @@ import { DocumentSearchComponent } from './document/document-search/document-sea
     DocumentDetailComponent,
     DocumentListComponent,
     DocumentEditComponent,
-    DocumentSearchComponent
+    DocumentSearchComponent,
+    CommitteeMemberCreateComponent,
+    CommitteeMemberDeleteComponent,
+    CommitteeMemberDetailComponent,
+    CommitteeMemberEditComponent,
+    CommitteeMemberListComponent,
+    CommitteeMemberSearchComponent,
+    JobApplicationCreateComponent,
+    JobApplicationDeleteComponent,
+    JobApplicationDetailComponent,
+    JobApplicationEditComponent,
+    JobApplicationListComponent,
+    JobApplicationSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +91,7 @@ import { DocumentSearchComponent } from './document/document-search/document-sea
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
-    AuthenticationBasicService, LoggedInGuard, UserService
+    AuthenticationBasicService, LoggedInGuard, UserService, CommitteeMemberService, JobApplicationService
   ],
   bootstrap: [AppComponent]
 })
