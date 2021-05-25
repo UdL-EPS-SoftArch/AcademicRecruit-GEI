@@ -27,7 +27,7 @@ export class ApplicantEditComponent implements OnInit {
       (patchedApplicant: Applicant) => {
         this.router.navigate(['applicant', this.applicant.id]);
       }
-    )
+    );
   }
 
 }

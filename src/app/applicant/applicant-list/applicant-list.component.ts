@@ -14,7 +14,7 @@ export class ApplicantListComponent implements OnInit {
   public pageSize = 5;
   public page = 1;
   public totalApplicants = 0;
-  
+
   constructor(private router: Router,
               private applicantService: ApplicantService) { }
 
@@ -28,7 +28,7 @@ export class ApplicantListComponent implements OnInit {
   }
 
   changePage(): void {
-    this.applicantService.page(this.page -1).subscribe(
+    this.applicantService.page(this.page - 1).subscribe(
       (applicants: Applicant[]) => this.applicants = applicants
     );
   }

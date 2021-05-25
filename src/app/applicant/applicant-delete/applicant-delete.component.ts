@@ -29,7 +29,7 @@ export class ApplicantDeleteComponent implements OnInit {
       () => {
         this.router.navigate(['']);
       }
-    )
+    );
   }
 
 }

@@ -9,7 +9,7 @@ import { ApplicantService } from '../applicant.service';
   styleUrls: ['./applicant-detail.component.css']
 })
 export class ApplicantDetailComponent implements OnInit {
-  
+
   public applicant: Applicant = new Applicant();
   constructor(private route: ActivatedRoute,
               private applicantService: ApplicantService) { }
