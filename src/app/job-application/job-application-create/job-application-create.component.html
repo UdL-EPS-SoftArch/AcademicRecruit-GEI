@@ -6,15 +6,15 @@
       <label class="control-label" for="name">Name*</label>
       <input id="name" name="name" type="text" class="form-control" required
              [(ngModel)]="jobApplication.name" #name="ngModel">
-      <div class="invalid-feedback">Es necesario introducir un nombre</div>
+      <div class="invalid-feedback">A name is required</div>
     </div>
 
     <!-- Description input -->
     <div class="form-group" [class.was-validated]="description.dirty || description.touched">
       <label class="control-label" for="name">Descripción</label>
-      <input id="description" name="description" type="text" class="form-control" required
+      <input id="description" name="description" type="text" class="form-control" required minlength="8" maxlength="256"
              [(ngModel)]="jobApplication.description" #description="ngModel">
-      <div class="invalid-feedback">Es necesario introducir una descripción</div>
+      <div class="invalid-feedback">A description is required</div>
     </div>
 
     <!-- Button -->
