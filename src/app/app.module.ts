@@ -25,6 +25,12 @@ import { UserRegisterComponent } from './user/user-register/user-register.compon
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
+import { DocumentCreateComponent } from './document/document-create/document-create.component';
+import { DocumentDeleteComponent } from './document/document-delete/document-delete.component';
+import { DocumentDetailComponent } from './document/document-detail/document-detail.component';
+import { DocumentListComponent } from './document/document-list/document-list.component';
+import { DocumentEditComponent } from './document/document-edit/document-edit.component';
+import { DocumentSearchComponent } from './document/document-search/document-search.component';
 import { PhaseCreateComponent } from './phase/phase-create/phase-create.component';
 import { PhaseDeleteComponent } from './phase/phase-delete/phase-delete.component';
 import { PhaseDetailComponent } from './phase/phase-detail/phase-detail.component';
@@ -60,6 +66,12 @@ import { ApplicantSearchComponent } from './applicant/applicant-search/applicant
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
+    DocumentCreateComponent,
+    DocumentDeleteComponent,
+    DocumentDetailComponent,
+    DocumentListComponent,
+    DocumentEditComponent,
+    DocumentSearchComponent,
     PhaseCreateComponent,
     PhaseDeleteComponent,
     PhaseDetailComponent,

@@ -1,0 +1,24 @@
+<button class="btn btn-primary cmbutton" routerLink="/document/create">Create Document</button>
+<button class="btn btn-primary cmbutton" routerLink="/document/1/delete">Delete Document</button>
+<button class="btn btn-primary cmbutton" routerLink="/document/1/edit">Edit Document</button>
+<button class="btn btn-primary cmbutton" routerLink="/document/1">Document Details</button>
+
+
+<div class="card mb-1" *ngFor="let document of documents">
+    <div class="card-block row m-1 col-12">
+      <div class="card-body row align-items-center">
+        <div class="col-6 mt-1">
+          <h6 class="card-subtitle text-muted">Name</h6>
+          <a class="card-text" [routerLink]="['/document', document.id]">{{document.name}}</a>
+        </div>
+        <div class="col-6 mt-1">
+            <h6 class="card-subtitle text-muted">Path</h6>
+            <a class="card-text" [routerLink]="['/document', document.id]">{{document.path}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ngb-pagination class="d-flex justify-content-center"
+                  [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalDocuments"
+                  (pageChange)="changePage()"></ngb-pagination>
