@@ -65,7 +65,7 @@ import { ApplicantSearchComponent } from './applicant/applicant-search/applicant
     JobApplicationDetailComponent,
     JobApplicationEditComponent,
     JobApplicationListComponent,
-    JobApplicationSearchComponent
+    JobApplicationSearchComponent,
     UserSearchComponent,
     ApplicantCreateComponent,
     ApplicantDeleteComponent,
