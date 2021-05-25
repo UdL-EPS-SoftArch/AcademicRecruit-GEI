@@ -25,6 +25,12 @@ import { UserRegisterComponent } from './user/user-register/user-register.compon
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
+import { PhaseCreateComponent } from './phase/phase-create/phase-create.component';
+import { PhaseDeleteComponent } from './phase/phase-delete/phase-delete.component';
+import { PhaseDetailComponent } from './phase/phase-detail/phase-detail.component';
+import { PhaseEditComponent } from './phase/phase-edit/phase-edit.component';
+import { PhaseListComponent } from './phase/phase-list/phase-list.component';
+import { PhaseSearchComponent } from './phase/phase-search/phase-search.component';
 import { CommitteeMemberCreateComponent } from './committee-member/committee-member-create/committee-member-create.component';
 import { CommitteeMemberDeleteComponent } from './committee-member/committee-member-delete/committee-member-delete.component';
 import { CommitteeMemberDetailComponent } from './committee-member/committee-member-detail/committee-member-detail.component';
@@ -54,6 +60,12 @@ import { ApplicantSearchComponent } from './applicant/applicant-search/applicant
     UserEditComponent,
     UserDeleteComponent,
     UserSearchComponent,
+    PhaseCreateComponent,
+    PhaseDeleteComponent,
+    PhaseDetailComponent,
+    PhaseEditComponent,
+    PhaseListComponent,
+    PhaseSearchComponent,
     CommitteeMemberCreateComponent,
     CommitteeMemberDeleteComponent,
     CommitteeMemberDetailComponent,
