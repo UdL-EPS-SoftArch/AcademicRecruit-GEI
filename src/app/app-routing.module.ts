@@ -8,6 +8,21 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserDeleteComponent } from './user/user-delete/user-delete.component';
+import {QualificationCreateComponent} from './qualification/qualification-create/qualification-create.component';
+import {QualificationDeleteComponent} from './qualification/qualification-delete/qualification-delete.component';
+import {QualificationDetailComponent} from './qualification/qualification-detail/qualification-detail.component';
+import {QualificationEditComponent} from './qualification/qualification-edit/qualification-edit.component';
+import {QualificationListComponent} from './qualification/qualification-list/qualification-list.component';
+import {DocumentCreateComponent} from './document/document-create/document-create.component';
+import {DocumentDeleteComponent} from './document/document-delete/document-delete.component';
+import {DocumentDetailComponent} from './document/document-detail/document-detail.component';
+import {DocumentEditComponent} from './document/document-edit/document-edit.component';
+import {DocumentListComponent} from './document/document-list/document-list.component';
+import {PhaseCreateComponent} from './phase/phase-create/phase-create.component';
+import {PhaseDeleteComponent} from './phase/phase-delete/phase-delete.component';
+import {PhaseDetailComponent} from './phase/phase-detail/phase-detail.component';
+import {PhaseEditComponent} from './phase/phase-edit/phase-edit.component';
+import {PhaseListComponent} from './phase/phase-list/phase-list.component';
 import {CommitteeMemberCreateComponent} from './committee-member/committee-member-create/committee-member-create.component';
 import {CommitteeMemberDeleteComponent} from './committee-member/committee-member-delete/committee-member-delete.component';
 import {CommitteeMemberEditComponent} from './committee-member/committee-member-edit/committee-member-edit.component';
@@ -24,12 +39,31 @@ import {ApplicantDetailComponent} from './applicant/applicant-detail/applicant-d
 import {ApplicantEditComponent} from './applicant/applicant-edit/applicant-edit.component';
 import {ApplicantListComponent} from './applicant/applicant-list/applicant-list.component';
 
+
 const routes: Routes = [
   { path: 'users/create', component: UserRegisterComponent},
   { path: 'users/:id/delete', component: UserDeleteComponent, canActivate: [LoggedInGuard]},
   { path: 'users/:id/edit', component: UserEditComponent, canActivate: [LoggedInGuard]},
   { path: 'users/:id', component: UserDetailComponent, canActivate: [LoggedInGuard]},
   { path: 'users', component: UserListComponent, canActivate: [LoggedInGuard]},
+  { path: 'about', component: AboutComponent},
+  { path: '404', component: NotFoundComponent},
+  { path: '', redirectTo: 'about', pathMatch: 'full'},
+  { path: 'qualification/create', component: QualificationCreateComponent},
+  { path: 'qualification/:id/delete', component: QualificationDeleteComponent},
+  { path: 'qualification/:id', component: QualificationDetailComponent},
+  { path: 'qualification/:id/edit', component: QualificationEditComponent},
+  { path: 'qualification', component: QualificationListComponent},
+  { path: 'document/create', component: DocumentCreateComponent},
+  { path: 'document/:id/delete', component: DocumentDeleteComponent},
+  { path: 'document/:id', component: DocumentDetailComponent},
+  { path: 'document/:id/edit', component: DocumentEditComponent},
+  { path: 'document', component: DocumentListComponent},
+  { path: 'phase/create', component: PhaseCreateComponent},
+  { path: 'phase/:id/delete', component: PhaseDeleteComponent},
+  { path: 'phase/:id', component: PhaseDetailComponent},
+  { path: 'phase/:id/edit', component: PhaseEditComponent},
+  { path: 'phase', component: PhaseListComponent},
   { path: 'committeemember/create', component: CommitteeMemberCreateComponent},
   { path: 'committeemember/:id/delete', component: CommitteeMemberDeleteComponent},
   { path: 'committeemember/:id', component: CommitteeMemberDetailComponent},
@@ -47,7 +81,7 @@ const routes: Routes = [
   { path: 'applicant', component: ApplicantListComponent},
   { path: 'about', component: AboutComponent},
   { path: '404', component: NotFoundComponent},
-  { path: '', redirectTo: 'about', pathMatch: 'full'},
+  { path: '', redirectTo: 'about', pathMatch: 'full'}
 ];
 
 @NgModule({
