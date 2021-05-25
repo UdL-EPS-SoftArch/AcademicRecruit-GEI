@@ -1,0 +1,16 @@
+
+<div class="card mb-1" *ngFor="let committeeMember of committeeMembers">
+  <div class="card-block row m-1 col-12">
+    <div class="card-body row align-items-center">
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">Rank</h6>
+        <a class="card-text" [routerLink]="['/committeemember', committeeMember.id]">{{committeeMember.rank}}</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngb-pagination class="d-flex justify-content-center"
+                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalCommitteeMembers"
+                (pageChange)="changePage()"></ngb-pagination>
