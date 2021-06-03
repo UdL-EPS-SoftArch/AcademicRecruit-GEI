@@ -1,7 +1,7 @@
-<button class="btn btn-primary cmbutton" routerLink="/document/create">Create Document</button>
-<button class="btn btn-primary cmbutton" routerLink="/document/1/delete">Delete Document</button>
-<button class="btn btn-primary cmbutton" routerLink="/document/1/edit">Edit Document</button>
-<button class="btn btn-primary cmbutton" routerLink="/document/1">Document Details</button>
+<button *ngIf="isRole('admin')" class="btn btn-primary cmbutton" routerLink="/document/create">Create Document</button>
+<button *ngIf="isRole('admin')"class="btn btn-primary cmbutton" routerLink="/document/1/delete">Delete Document</button>
+<button *ngIf="isRole('admin')"class="btn btn-primary cmbutton" routerLink="/document/1/edit">Edit Document</button>
+<button *ngIf="isRole('admin')"class="btn btn-primary cmbutton" routerLink="/document/1">Document Details</button>
 
 
 <div class="card mb-1" *ngFor="let document of documents">
@@ -18,7 +18,7 @@
       </div>
     </div>
   </div>
-  
+
   <ngb-pagination class="d-flex justify-content-center"
                   [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalDocuments"
                   (pageChange)="changePage()"></ngb-pagination>
