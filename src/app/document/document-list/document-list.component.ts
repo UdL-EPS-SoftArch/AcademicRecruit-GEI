@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Document } from 'src/app/models/document';
 import { DocumentService } from '../document.service';
+import { AuthenticationBasicService } from '../../login-basic/authentication-basic.service';
 
 @Component({
   selector: 'app-document-list',
@@ -15,7 +16,8 @@ export class DocumentListComponent implements OnInit {
   public totalDocuments = 0;
 
   constructor(private router: Router,
-              private documentService: DocumentService) { }
+              private documentService: DocumentService,
+              private authenticationService: AuthenticationBasicService) { }
 
   ngOnInit(): void {
     this.documentService.getAll({size: this.pageSize}).subscribe(
@@ -39,5 +41,7 @@ export class DocumentListComponent implements OnInit {
   getCurrentDocument(): Document {
     return this.documentService.getCurrentDocument();
   }
-
+  isRole(role: string): boolean {
+    return this.authenticationService.isRole(role);
+  }
 }
