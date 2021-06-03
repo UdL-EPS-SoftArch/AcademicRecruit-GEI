@@ -1,3 +1,8 @@
+<button *ngIf="isRole('admin')" class="btn btn-primary cmbutton" routerLink="/applicant/create">Create Applicant</button>
+<button *ngIf="isRole('admin')" class="btn btn-primary cmbutton" routerLink="/applicant/1/delete">Delete Applicant</button>
+<button  *ngIf="isRole('admin')" class="btn btn-primary cmbutton" routerLink="/applicant/1/edit">Edit Applicant</button>
+<button class="btn btn-primary cmbutton" routerLink="/applicant/1">Applicant Details</button>
+
 <div class="card mb-1" *ngFor="let applicant of applicants">
     <div class="card-block row m-1 col-12">
       <div class="card-body row align-items-center">

@@ -27,6 +27,9 @@ export class HttpErrorInterceptor implements HttpInterceptor {
               case 401:
                 this.errorMessageService.showErrorMessage('Username or password incorrect');
                 break;
+              case 403:
+                this.errorMessageService.showErrorMessage('Insufficient permissions');
+                break;
               case 404:
                 break;
               default:
