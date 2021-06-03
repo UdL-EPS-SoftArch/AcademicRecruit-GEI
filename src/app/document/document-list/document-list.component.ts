@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Document } from 'src/app/models/document';
 import { DocumentService } from '../document.service';
 import { AuthenticationBasicService } from '../../login-basic/authentication-basic.service';
-import {ApplicantService} from "../../applicant/applicant.service";
 
 @Component({
   selector: 'app-document-list',
