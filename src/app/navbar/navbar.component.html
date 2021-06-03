@@ -22,7 +22,7 @@
       </li>
       <li class="nav-item"  ngbDropdown>
         <a class="nav-link dropdown-toggle" id="documentdropdown" role="button"
-           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Applicant</a>
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Document</a>
         <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/document']"><span class="fas fa-user-circle"></span> List</a>
@@ -47,7 +47,7 @@
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/committeemember']"><span class="fas fa-user-circle"></span> List</a>
           <a *ngIf="isRole('admin')" class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/committeemember/create']"><span class="fas fa-user-plus"></span> Create CommitteeMember</a>
+             [routerLink]="['/committeemember/create']"><span class="fas fa-user-plus"></span> Create</a>
         </div>
       </li>
       <li class="nav-item"  ngbDropdown>
