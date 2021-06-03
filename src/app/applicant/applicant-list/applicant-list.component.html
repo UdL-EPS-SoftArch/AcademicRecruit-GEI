@@ -1,4 +1,3 @@
-
 <button *ngIf="isRole('admin')" class="btn btn-primary cmbutton" routerLink="/applicant/create">Create Applicant</button>
 <button *ngIf="isRole('admin')" class="btn btn-primary cmbutton" routerLink="/applicant/1/delete">Delete Applicant</button>
 <button  *ngIf="isRole('admin')" class="btn btn-primary cmbutton" routerLink="/applicant/1/edit">Edit Applicant</button>
@@ -8,9 +7,12 @@
     <div class="card-block row m-1 col-12">
       <div class="card-body row align-items-center">
         <div class="col-6 mt-1">
-          <h6 class="card-subtitle text-muted">Applicant</h6>
+          <h6 class="card-subtitle text-muted">E-mail</h6>
           <a class="card-text" [routerLink]="['/applicant', applicant.id]">{{applicant.email}}</a>
-          <a class="card-text" [routerLink]="['/applicant', applicant.id]">{{applicant.DNI}}</a>
+        </div>
+        <div class="col-6 mt-1">
+          <h6 class="card-subtitle text-muted">DNI</h6>
+          <p class="card-text">{{applicant.dni}}</p>
         </div>
       </div>
     </div>
