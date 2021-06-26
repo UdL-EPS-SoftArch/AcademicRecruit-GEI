@@ -1,1 +1,30 @@
-<button class="btn btn-primary cmbutton" routerLink="/phase">Phase Details</button>
+<div class="card mb-4">
+  <div class="card-block">
+    <h4 class="card-title col-md-12 p-3">{{phase.phasenumber}}</h4>
+    <div class="card-body row m-1">
+      <div class="col-md-4 p-3">
+        <h6 class="card-subtitle text-muted">ID</h6>
+        <p class="card-text">{{phase.id}}</p>
+      </div>
+      <div class="col-md-4 p-3">
+        <h6 class="card-subtitle text-muted">phaseNumber</h6>
+        <p class="card-text">{{phase.phasenumber}}</p>
+      </div>
+      <div class="col-md-4 p-3">
+        <h6 class="card-subtitle text-muted">Name</h6>
+        <p class="card-text">{{phase.name}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer text-right">
+    <button id="listBtn" type="button" [routerLink]="['/phase']"
+            class="btn m-1 btn-outline-primary">Go back to applicant List
+    </button>
+    <button id="editBtn" type="button"  [routerLink]="['edit']"
+            class="btn m-1 btn-outline-success">Edit
+    </button>
+    <button id="deleteBtn" type="button" [routerLink]="['delete']"
+            class="btn m-1 btn-outline-danger">Delete
+    </button>
+  </div>
+</div>

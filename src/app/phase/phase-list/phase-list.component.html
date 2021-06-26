@@ -1,4 +1,18 @@
-<button class="btn btn-primary cmbutton" routerLink="/phase/create">Create Phase</button>
-<button class="btn btn-primary cmbutton" routerLink="/phase/1/delete">Delete Phase</button>
-<button class="btn btn-primary cmbutton" routerLink="/phase/1/edit">Edit Phase</button>
-<button class="btn btn-primary cmbutton" routerLink="/phase/1">Phase Details</button>
+<div class="card mb-1" *ngFor="let phase of phases">
+  <div class="card-block row m-1 col-12">
+    <div class="card-body row align-items-center">
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">phaseNumber</h6>
+        <a class="card-text" [routerLink]="['/phase', phase.id]">{{phase.phasenumber}}</a>
+      </div>
+      <div class="col-6 mt-1">
+        <h6 class="card-subtitle text-muted">Name</h6>
+        <p class="card-text">{{phase.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngb-pagination class="d-flex justify-content-center"
+                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalPhases"
+                (pageChange)="changePage()"></ngb-pagination>

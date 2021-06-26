@@ -1,1 +1,26 @@
-<button class="btn btn-primary cmbutton" routerLink="/phase">Create Phase</button>
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+  <fieldset>
+    <div class="form-group">
+      <div>
+        <p>phaseNumber</p>
+        <input id="phasenumber" name="phasenumber" class="form-control" required [(ngModel)]="phase.phasenumber"/>
+      </div>
+      <div>
+        <p>Name</p>
+        <input id="name" name="name" class="form-control" [(ngModel)]="phase.phasenumber"/>
+      </div>
+      <div>
+        <p>Initial Date</p>
+        <input id="initialDate" name="initialDate" class="form-control" [(ngModel)]="phase.initialDate"/>
+      </div>
+      <div>
+        <p>Final Date</p>
+        <input id="finalDate" name="finalDate" class="form-control" required [(ngModel)]="phase.finalDate"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Submit</button>
+      <button id="listBtn" type="button" (click)="onCancel()" class="btn m-1 btn-outline-primary pull-right">Back</button>
+    </div>
+  </fieldset>
+</form>

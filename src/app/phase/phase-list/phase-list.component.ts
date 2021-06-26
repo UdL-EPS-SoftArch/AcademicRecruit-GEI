@@ -13,9 +13,9 @@ export class PhaseListComponent implements OnInit {
   public pageSize = 5;
   public page = 1;
   public totalPhases = 0;
-  
+
   constructor(public router: Router,
-    public phaseService: PhaseService) { }
+              public phaseService: PhaseService) { }
 
   ngOnInit(): void {
     this.phaseService.getAll({
