@@ -20,7 +20,7 @@ export class QualificationEditComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.qualificationService.get('id').subscribe(
       qualification => {
-        this.qualification = qualification
+        this.qualification = qualification;
       }
     );
   }
