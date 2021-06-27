@@ -17,7 +17,7 @@ export class QualificationListComponent implements OnInit {
   public totalQualifications = 0;
 
   constructor(public router: Router,
-    public qualificationService: QualificationService) { }
+              public qualificationService: QualificationService) { }
 
   ngOnInit(): void {
     this.qualificationService.getAll({size: this.pageSize}).subscribe(
