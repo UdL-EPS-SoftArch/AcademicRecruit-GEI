@@ -8,7 +8,7 @@ import { Document } from '../models/document';
 export class DocumentService extends RestService<Document>{
 
   constructor(injector: Injector) {
-    super(Document, 'document', injector);
+    super(Document, 'documents', injector);
   }
 
   getCurrentDocument(): Document {
