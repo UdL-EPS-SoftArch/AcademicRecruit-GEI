@@ -8,7 +8,7 @@ import { Phase } from '../models/phase';
 export class PhaseService extends RestService<Phase> {
 
   constructor(injector: Injector) {
-    super(Phase, 'phase', injector);
+    super(Phase, 'phases', injector);
   }
 
   getCurrentPhase(): Phase {
