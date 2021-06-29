@@ -11,7 +11,6 @@ import { PhaseService } from '../phase.service';
   styleUrls: ['./phase-create.component.css']
 })
 export class PhaseCreateComponent implements OnInit {
-
   public phase: Phase;
 
   constructor(private router: Router,

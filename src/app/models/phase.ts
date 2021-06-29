@@ -2,7 +2,7 @@ import { Resource} from '@lagoshny/ngx-hal-client';
 
 export class Phase extends Resource{
   id: string;
-  phasenumber: string;
+  phaseNumber: string;
   name: string;
   initialDate: string;
   finalDate: string;
